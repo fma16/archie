@@ -9,9 +9,15 @@
 	<title>{{ $title }} - {{ $siteTitle }}</title>
 	{{- end -}}
 
-	{{- if isset .Site.Params "favicon" -}}
-	<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
-	{{- end -}}
+    <link rel="shortcut icon" href="https://cdn.lawgier.net/assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://cdn.lawgier.net/assets/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.lawgier.net/assets/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.lawgier.net/assets/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.lawgier.net/assets/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.lawgier.net/assets/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.lawgier.net/assets/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.lawgier.net/assets/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.lawgier.net/assets/apple-touch-icon-152x152.png" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,4 +57,35 @@
 	<script src="{{ $.Site.BaseURL }}{{ . }}"></script>
 	{{- end }}
 	{{- end }}
+	
+	
+<!-- Littlefoot -->
+    <link
+      link rel="stylesheet"
+      href="https://cdn.lawgier.net/littlefoot/littlefoot.css"
+    />
+
+<!-- TarteAuCitron -->
+    <script type="text/javascript" src="https://cdn.lawgier.net/tarteaucitron/tarteaucitron.js"></script>
+    <script type="text/javascript">
+        tarteaucitron.init({
+            "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+            "highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
+            "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+            "adblocker": false, /* Afficher un message si un adblocker est détecté */
+            "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
+            "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+            "cookieslist": true, /* Afficher la liste des cookies installés ? */
+            "removeCredit": false, /* supprimer le lien vers la source ? */
+            "handleBrowserDNTRequest": true, /* Deny everything if DNT is on */
+            "cookieDomain": ".lawgier.net" /* Nom de domaine sur lequel sera posé le cookie pour les sous-domaines */
+        });
+    </script>
+
+    <script type="text/javascript">
+        /* tarteaucitron.user.typekitId = 'ukh6vgy';
+        (tarteaucitron.job = tarteaucitron.job || []).push('typekit'); */
+        (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
+        (tarteaucitron.job = tarteaucitron.job || []).push('vimeo');
+    </script>
 </head>
