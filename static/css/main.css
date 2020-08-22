@@ -3,7 +3,7 @@
 */
 @font-face {
   font-family: 'JetBrainsMono Bold', monospace;
-  src: url('https://cdn.lawgier.net/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('IBM Plex Sans'), local('IBMPlexSans'), url(https://cdn.lawgier.net/fonts/IBMPlexSans-Regular.woff2) format('woff2');
+  src: local('IBM Plex Sans'), local('IBMPlexSans'), url(/fonts/IBMPlexSans-Regular.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'), url(https://cdn.lawgier.net/fonts/IBMPlexSans-Bold.woff2) format('woff2');
+  src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'), url(/fonts/IBMPlexSans-Bold.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -27,7 +27,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local('IBM Plex Sans Italic'), local('IBMPlexSans-Italic'), url(https://cdn.lawgier.net/fonts/IBMPlexSans-Italic.woff2) format('woff2');
+  src: local('IBM Plex Sans Italic'), local('IBMPlexSans-Italic'), url(/fonts/IBMPlexSans-Italic.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -35,7 +35,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local('IBM Plex Sans Bold Italic'), local('IBMPlexSans-BoldItalic'), url(https://cdn.lawgier.net/fonts/IBMPlexSans-BoldItalic.woff2) format('woff2');
+  src: local('IBM Plex Sans Bold Italic'), local('IBMPlexSans-BoldItalic'), url(/fonts/IBMPlexSans-BoldItalic.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Markdown */
