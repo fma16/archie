@@ -9,7 +9,7 @@ tarteaucitron.lang = {
     "alertBigClick": "If you continue to browse this website,",
     "alertBig": "you are allowing all third-party services",
     
-    "alertBigPrivacy": "This site uses cookies and gives you control over what you want to activate",
+    "alertBigPrivacy": "Third-party embeeds on this website uses cookies. Do you want to use them?",
     "alertSmall": "Manage services",
     "personalize": "Personalize",
     "acceptAll": "OK, accept all",
