@@ -1,7 +1,6 @@
-# Inter
-Copyright (c) 2016-2020 The Inter Project Authors.
-"Inter" is a Reserved Font Name.
-https://github.com/rsms/inter
+# IBM Plex
+https://github.com/IBM/plex
+Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 
@@ -10,14 +9,6 @@ This license is copied below, and is also available with a FAQ at: http://script
 # JetBrains Mono
 https://github.com/JetBrains/JetBrainsMono
 JetBrains Mono typeface is available under the Apache 2.0 license and can be used free of charge, for both commercial and non-commercial purposes.
-
-# IBM Plex
-https://github.com/IBM/plex
-Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-
-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
