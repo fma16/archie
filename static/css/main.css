@@ -29,7 +29,7 @@ Usage:
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("Inter-italic.var.woff2") format("woff2");
+  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
 }
 /* Markdown */
 :root{
