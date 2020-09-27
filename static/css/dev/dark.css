@@ -68,7 +68,7 @@ h6::before {
 }
 
 a {
-  border-bottom: 3px solid var(--darkMaincolor);
+  text-decoration-color: var(--darkMaincolor);
   color: inherit;
 }
 a:hover {
