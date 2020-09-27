@@ -186,6 +186,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1em 0;
+  font-weight: 700;
 }
 
 header .main {
