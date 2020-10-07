@@ -44,10 +44,15 @@
 	{{- else if (isset .Site.Params "social") -}}
 		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
+
+	{{ $maincss := resources.Get "css/main.css" }}
+	{{ $darkcss:= resources.Get "css/dark.css" }}
+	{{ $style := slice $maincss $darkcss | resources.Concat "css/style.css" | resources.Minify }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}">
+<!-- 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
 	{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} />
-	{{- end -}}
+	{{- end -}} -->
 	{{- range .Site.Params.customJS }}
 	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
 	<script src="{{ . }}"></script>
