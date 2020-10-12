@@ -53,7 +53,7 @@ Usage:
 }
 html {
   color: #232333;
-  font-family: 'fira-mono', ui-monospace, monospace;
+  font-family: SFMono-Regular, 'fira-mono', ui-monospace, monospace;
   font-size: 15px;
   line-height: 1.6em;
 }
@@ -76,10 +76,28 @@ p, table, th, td {
   line-height: 1.5;
 }
 
+/* navbar color cycle animation */
+
+@keyframes cyclecolorshr {
+  0%    {background:#f89438;background-clip: border-box;-webkit-background-clip: border-box;}
+  16%   {background:#e65453;background-clip: border-box;-webkit-background-clip: border-box;}
+  32%   {background:#a759a8;background-clip: border-box;-webkit-background-clip: border-box;}
+  48%   {background:#32afe2;background-clip: border-box;-webkit-background-clip: border-box;}
+  64%   {background:#76c261;background-clip: border-box;-webkit-background-clip: border-box;}
+  96%   {background:#fdc345;background-clip: border-box;-webkit-background-clip: border-box;}
+  100%  {background:#f89438;background-clip: border-box;-webkit-background-clip: border-box;}
+}
+
 hr {
   border: 0;
-  border-top: 3px dotted var(--bordercl);
-  margin: 1em 0;
+  border-top: 2px dashed #202124;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: -1%;
+  margin-right: -1%;
+  animation:cyclecolorshr linear infinite;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
 blockquote {
@@ -184,18 +202,40 @@ pre code {
   word-wrap: break-word;
 }
 
+/* navbar color cycle animation */
+
+@keyframes cyclecolors {
+  0%    {background:#f89438;background-clip: text;-webkit-background-clip: text;}
+  16%   {background:#e65453;background-clip: text;-webkit-background-clip: text;}
+  32%   {background:#a759a8;background-clip: text;-webkit-background-clip: text;}
+  48%   {background:#32afe2;background-clip: text;-webkit-background-clip: text;}
+  64%   {background:#76c261;background-clip: text;-webkit-background-clip: text;}
+  96%   {background:#fdc345;background-clip: text;-webkit-background-clip: text;}
+  100%  {background:#f89438;background-clip: text;-webkit-background-clip: text;}
+}
+
 /* Header */
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1em 0;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
   font-weight: 700;
+  line-height: 1.8em;
+  font-size: 1.15rem;
+  color: transparent;
+  text-decoration: none;
+  animation:cyclecolors linear infinite;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
 header .main {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-style: italic;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   margin-top: 2em;

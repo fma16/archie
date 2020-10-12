@@ -15,9 +15,6 @@ body {
   text-shadow: none;
 }
 
-hr {
-  border-top: 3px dotted blue;
-}
 code {
   background-color: lightblue;
   color: black;
