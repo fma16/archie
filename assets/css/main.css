@@ -215,9 +215,13 @@ header {
   text-decoration: none;
 }
 
-header .main {
+/* header .main {
   font-size: 1.6rem;
   font-style: italic;
+}
+ */
+header img {
+  border: unset;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,6 +1,8 @@
 <header>
 	<div class="main">
-		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		<a href="{{ .Site.BaseURL }}">
+			<img src="{{ .Site.BaseURL }}i/logo.svg"/>
+		</a>
 	</div>
 	<nav>
 		{{ range .Site.Menus.main }}
