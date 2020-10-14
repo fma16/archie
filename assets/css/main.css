@@ -71,14 +71,14 @@ body{
 }
 
 p, table, th, td {
-  font-family: 'Inter var', -apple-system, sans-serif;
+  font-family: 'Inter var', system-ui, -apple-system, sans-serif;
   font-size: 15px;
   line-height: 1.5;
 }
 
 /* navbar color cycle animation */
 
-@keyframes cyclecolorshr {
+@keyframes cyclecolors {
   0%    {background:#f89438;background-clip: border-box;-webkit-background-clip: border-box;}
   16%   {background:#e65453;background-clip: border-box;-webkit-background-clip: border-box;}
   32%   {background:#a759a8;background-clip: border-box;-webkit-background-clip: border-box;}
@@ -90,12 +90,12 @@ p, table, th, td {
 
 hr {
   border: 0;
-  border-top: 2px dashed #202124;
+  border-top: 5px dashed #202124;
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: -1%;
-  margin-right: -1%;
-  animation:cyclecolorshr linear infinite;
+  margin-left: -2%;
+  margin-right: -2%;
+  animation:cyclecolors linear infinite;
   animation-duration: 15s;
   animation-iteration-count: infinite;
 }
@@ -202,18 +202,6 @@ pre code {
   word-wrap: break-word;
 }
 
-/* navbar color cycle animation */
-
-@keyframes cyclecolors {
-  0%    {background:#f89438;background-clip: text;-webkit-background-clip: text;}
-  16%   {background:#e65453;background-clip: text;-webkit-background-clip: text;}
-  32%   {background:#a759a8;background-clip: text;-webkit-background-clip: text;}
-  48%   {background:#32afe2;background-clip: text;-webkit-background-clip: text;}
-  64%   {background:#76c261;background-clip: text;-webkit-background-clip: text;}
-  96%   {background:#fdc345;background-clip: text;-webkit-background-clip: text;}
-  100%  {background:#f89438;background-clip: text;-webkit-background-clip: text;}
-}
-
 /* Header */
 header {
   display: flex;
@@ -224,11 +212,7 @@ header {
   font-weight: 700;
   line-height: 1.8em;
   font-size: 1.15rem;
-  color: transparent;
   text-decoration: none;
-  animation:cyclecolors linear infinite;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
 }
 
 header .main {
