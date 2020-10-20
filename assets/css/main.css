@@ -254,6 +254,10 @@ footer {
   text-align: center;
 }
 
+button {
+  font-family: 'Inter var', system-ui, -apple-system, sans-serif;
+}
+
 /* Common */
 .title h1 {
   margin-bottom: 0;
