@@ -139,10 +139,18 @@ ul li::before {
 
 /* Images */
 img {
+  max-width: 100%;
+}
+
+/* article .md_image img{
   max-width: 120%;
+}
+.body img {
+  max-width: 800px;
   margin-left: 50%;
   transform: translateX(-50%);
-}
+  overflow: hidden;
+} */
 
 figure {
   box-sizing: border-box;
@@ -220,7 +228,7 @@ header {
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: 700;
-  line-height: 1.8em;
+  /* line-height: 1.8em; */
   font-size: 1.15rem;
   text-decoration: none;
 }
@@ -366,6 +374,11 @@ color: white;
 content: 'shell';
 background: green;
 color:white
+}
+.highlight pre code[class*='language-xml']::before{
+  content: 'xml';
+  background: dodgerblue;
+   color: #000000 
 }
 .highlight pre code[class*='language-json']::before{
 content: 'json';
