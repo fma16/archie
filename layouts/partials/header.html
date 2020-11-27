@@ -83,6 +83,27 @@
             "handleBrowserDNTRequest": true, /* Deny everything if DNT is on */
             "cookieDomain": ".lawgier.net" /* Nom de domaine sur lequel sera posé le cookie pour les sous-domaines */
         });
+		tarteaucitron.services.panelBear = {
+			"key": "panelBear",
+			"type": "analytic",
+			"name": "panelBear",
+			"needConsent": false,
+			"cookies": [],
+			"readmoreLink": "https://panelbear.com/docs/what-we-collect/", // If you want to change readmore link
+			"js": function () {
+				"use strict";
+				tarteaucitron.addScript('//cdn.panelbear.com/analytics.js?site=6WeeR2lJvBF', '', function () {
+					window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; panelbearQ.push(arguments); };
+					panelbear('config', { site: '6WeeR2lJvBF' });
+				});
+				// When user allow cookie
+			},
+			"fallback": function () {
+				"use strict";
+				// when use deny cookie
+			}
+		};
+		(tarteaucitron.job = tarteaucitron.job || []).push('panelBear');
     </script>
 
     <script type="text/javascript">
