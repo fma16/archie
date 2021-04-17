@@ -23,7 +23,6 @@
 
 	<meta property="og:description" content="{{ .Params.description }}" />
 	<meta name="twitter:description" content="{{ .Params.description }}" />
-	<meta name="description" content="{{ $.Param "description" }}" />
 	<meta name="description" content="{{ $.Params.description }}" />
 
 	<meta property="og:title" content="{{ $title }} | {{ $siteTitle }}" />
@@ -61,6 +60,12 @@
 	{{- end }}
 	{{- end }}
 	
+<!-- Panelbear Analytics - We respect your privacy -->
+	<script async src="https://cdn.panelbear.com/analytics.js?site=6WeeR2lJvBF"></script>
+	<script>
+		window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+		panelbear('config', { site: '6WeeR2lJvBF' });
+	</script>
 	
 <!-- Littlefoot -->
     <link
@@ -75,42 +80,20 @@
             "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
             "highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
             "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+			"groupServices": true, /* Group services by category */
             "adblocker": false, /* Afficher un message si un adblocker est détecté */
             "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
+			"showIcon": false, /* Show cookie icon to manage cookies */
             "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
             "cookieslist": true, /* Afficher la liste des cookies installés ? */
             "removeCredit": false, /* supprimer le lien vers la source ? */
             "handleBrowserDNTRequest": true, /* Deny everything if DNT is on */
+			"mandatory": false, /* Show a message about mandatory cookies */
             "cookieDomain": ".lawgier.net" /* Nom de domaine sur lequel sera posé le cookie pour les sous-domaines */
         });
-		tarteaucitron.services.panelBear = {
-			"key": "panelBear",
-			"type": "analytic",
-			"name": "panelBear",
-			"needConsent": false,
-			"cookies": [],
-			"readmoreLink": "https://panelbear.com/docs/what-we-collect/", // If you want to change readmore link
-			"js": function () {
-				"use strict";
-				tarteaucitron.addScript('//cdn.panelbear.com/analytics.js?site=6WeeR2lJvBF', '', function () {
-					window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; panelbearQ.push(arguments); };
-					panelbear('config', { site: '6WeeR2lJvBF' });
-				});
-				// When user allow cookie
-			},
-			"fallback": function () {
-				"use strict";
-				// when use deny cookie
-			}
-		};
-		(tarteaucitron.job = tarteaucitron.job || []).push('panelBear');
     </script>
-
     <script type="text/javascript">
         (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
         (tarteaucitron.job = tarteaucitron.job || []).push('vimeo');
-		tarteaucitron.user.matomoId = 1;
-        tarteaucitron.user.matomoHost = 'https://a.lawgier.net/';
-        (tarteaucitron.job = tarteaucitron.job || []).push('matomo');
     </script>
 </head>
