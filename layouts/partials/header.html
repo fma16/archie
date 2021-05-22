@@ -37,18 +37,18 @@
 		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
 
-	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify | relURL }}
-	{{ $lightcss:= resources.Get "css/light.css" | resources.Minify | relURL }}	
-	<link rel="stylesheet" type="text/css" href="{{ $darkcss.Permalink }}" media="(prefers-color-scheme: dark)">
-	<link rel="stylesheet" type="text/css" href="{{ $lightcss.Permalink }}" media="(prefers-color-scheme: light)">
+	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify }}
+	{{ $lightcss:= resources.Get "css/light.css" | resources.Minify }}	
+	<link rel="stylesheet" type="text/css" href="{{ $darkcss.Permalink | relURL }}" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" type="text/css" href="{{ $lightcss.Permalink | relURL }}" media="(prefers-color-scheme: light)">
 
 	{{ $maincss:= resources.Get "css/main.css" }}
 	{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify | relURL }}
-	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
+	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
-	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify  | relURL}}
-	<script async type="module" src="{{ $darkcss.Permalink }}"></script>
+	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify }}
+	<script async type="module" src="{{ $darkcss.Permalink | relURL }}"></script>
 
 	{{- range .Site.Params.customJS }}
 	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
