@@ -252,9 +252,10 @@ header {
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: 700;
-  /* line-height: 1.8em; */
+  line-height: 1em;
   font-size: 1.15rem;
   text-decoration: none;
+  align-items: center;
 }
 
 /* header .main {
