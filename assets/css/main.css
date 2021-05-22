@@ -45,10 +45,10 @@ Usage:
 
 /* Markdown */
 :root{
---maincolor: red;
+--maincolor: #FC7E0F;
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
---hovercolor:navy;
+--hovercolor:#fc9841;
 --darkMaincolor: #FC7E0F;
 }
 html {
@@ -92,7 +92,7 @@ p, table, th, td {
 
 hr {
   border: 0;
-  border-top: 5px dashed #202124;
+  border-top: 5px dashed #ffffff;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: -2%;
@@ -119,6 +119,30 @@ a {
 a:hover {
     background-color: var(--hovercolor);
     color: #fff;
+}
+
+.littlefoot-footnote__content {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+  border-radius: .5em;
+  box-sizing: inherit;
+  display: inline-block;
+  line-height: normal;
+  font-size: initial;
+  font-style: initial;
+  font-weight: initial;
+  max-height: 15em;
+  overflow: auto;
+  padding: .6em 1.4em .6em;
+  position: relative;
+  z-index: 8
+}
+
+.littlefoot-footnote__button.is-active {
+  background-color: rgb(243, 174, 114);
+  color: #fff;
+  transition-delay: .1s
 }
 
 ul {
