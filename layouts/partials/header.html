@@ -11,13 +11,6 @@
 
   <link rel="shortcut icon" href="https://cdn.lawgier.net/assets/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://cdn.lawgier.net/assets/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.lawgier.net/assets/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.lawgier.net/assets/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.lawgier.net/assets/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.lawgier.net/assets/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.lawgier.net/assets/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.lawgier.net/assets/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.lawgier.net/assets/apple-touch-icon-152x152.png" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,33 +37,19 @@
 		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
 
-	{{- if (eq .Site.Params.mode "light") -}}
-		{{ $maincss:= resources.Get "css/main.css" }}
-		{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-		{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}">
-	{{ end }}
+	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify }}
+	{{ $lightcss:= resources.Get "css/light.css" | resources.Minify }}	
+	<link rel="stylesheet" type="text/css" href="{{ $darkcss.Permalink }}" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" type="text/css" href="{{ $lightcss.Permalink }}" media="(prefers-color-scheme: light)">
 
-	{{- if (eq .Site.Params.mode "auto") -}}
-		{{ $maincss:= resources.Get "css/main.css" }}
-		{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-		{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}">
-		{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify }}
-		<link rel="stylesheet" type="text/css" href="{{ $darkcss.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} />
-	{{- end -}}
+	{{ $maincss:= resources.Get "css/main.css" }}
+	{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
+	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
+	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
-	{{- if (eq .Site.Params.mode "dark") -}}
-		{{ $maincss := resources.Get "css/main.css" }}
-		{{ $darkcss:= resources.Get "css/dark.css" }}
-		{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-		{{ $style := slice $maincss $darkcss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
-		<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}">
-	{{ end }}
-<!-- 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
-	{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
-		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} />
-	{{- end -}} -->
+	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify }}
+	<script async type="module" src="{{ $darkcss.Permalink }}"></script>
+
 	{{- range .Site.Params.customJS }}
 	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
 	<script src="{{ . }}"></script>

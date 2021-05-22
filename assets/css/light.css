@@ -1,0 +1,14 @@
+/* light.css: 👉 dark-on-light */
+:root {
+    --maincolor:#FC7E0F;
+    --bgColor: #fff;
+    --fontColor:#232333;
+    --hColor:#232333;
+    --bordercl:rebeccapurple;
+    --callouctcolor:dodgerblue;
+    --hovercolor:#fc9841;
+    --codeColor:#f1f1f1;
+    --preColor:#ececec;
+    --littlefootBground:#ffffff;
+    --littlefootButton:rgb(243, 174, 114);
+  }
