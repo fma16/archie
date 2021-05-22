@@ -1,0 +1,6 @@
+.env
+.env.build
+content/posts/.Ulysses-Group.plist
+content/posts/.Ulysses-Settings.plist
+public/
+.DS_Store
