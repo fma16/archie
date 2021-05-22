@@ -37,17 +37,17 @@
 		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
 
-	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify }}
-	{{ $lightcss:= resources.Get "css/light.css" | resources.Minify }}	
+	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify | relURL }}
+	{{ $lightcss:= resources.Get "css/light.css" | resources.Minify | relURL }}	
 	<link rel="stylesheet" type="text/css" href="{{ $darkcss.Permalink }}" media="(prefers-color-scheme: dark)">
 	<link rel="stylesheet" type="text/css" href="{{ $lightcss.Permalink }}" media="(prefers-color-scheme: light)">
 
 	{{ $maincss:= resources.Get "css/main.css" }}
 	{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
+	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify | relURL }}
 	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
-	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify }}
+	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify  | relURL}}
 	<script async type="module" src="{{ $darkcss.Permalink }}"></script>
 
 	{{- range .Site.Params.customJS }}
