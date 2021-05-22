@@ -48,7 +48,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
 	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify }}
-	<script async type="module" src="{{ $darkcss.Permalink | relURL }}"></script>
+	<script async type="module" src="{{ $darkModeToggleJS.Permalink | relURL }}"></script>
 
 	{{- range .Site.Params.customJS }}
 	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
