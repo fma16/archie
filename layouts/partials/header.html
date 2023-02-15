@@ -53,18 +53,12 @@
 	{{- end }}
 	{{- end }}
 	
-<!-- Panelbear Analytics - We respect your privacy -->
-	<script async src="https://cdn.panelbear.com/analytics.js?site=6WeeR2lJvBF"></script>
-	<script>
-		window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
-		panelbear('config', { site: '6WeeR2lJvBF' });
-	</script>
-
-<!-- Cloudflare Web Analytics -->
-	<script 
-	defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f013cdfa84834d8db41eefc36f46d19d"}'>
-	</script>
-	<!-- End Cloudflare Web Analytics -->
+<!-- Cronitor RUM -->
+<script async src="https://rum.cronitor.io/script.js"></script>
+<script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '6883d8ba330c4cbabef491cb30ddcefd' });
+</script>
 	
 <!-- Littlefoot -->
 <!--     <link
