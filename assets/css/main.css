@@ -14,7 +14,7 @@ Usage:
     html { font-family: 'Inter var', sans-serif; }
   }
 */
-@font-face {
+/* @font-face {
   font-family: 'Inter var';
   font-weight: 400 700;
   font-display: swap;
@@ -41,7 +41,7 @@ Usage:
   font-feature-settings: "ss01", "calt", "ss03", "ss04", "zero";
   src: url('/fonts/FiraCode-VF.woff2') format('woff2-variations'),
        url("/fonts/FiraCode-Regular.woff2") format("woff2");
-}
+} */
 
 /* Markdown */
 :root {
@@ -50,9 +50,9 @@ Usage:
 
 html {
   color: var(--fontColor);
-  font-family: ui-monospace, SFMono-Regular, 'fira-mono', monospace;
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 15px;
-  line-height: 1.6em;
+  line-height: 1.5em;
 }
 
 body{
@@ -71,9 +71,9 @@ body{
 }
 
 p, table, th, td {
-  font-family: 'Inter var', system-ui, -apple-system, sans-serif;
+  font-family: "Mercury SSm A", "Mercury SSm B", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.15rem;
-  line-height: 1.875rem;
+  line-height: 1.6rem;
   /* font-size: 15px; 
   line-height: 1.5; */
 }
@@ -90,6 +90,15 @@ p, table, th, td {
   100%  {background:#f89438;background-clip: border-box;-webkit-background-clip: border-box;}
 }
 
+@keyframes cyclecolorstext {
+  0%    {color:#76c261;}
+	16%	  {color:#fdc345;}
+	32%	  {color:#f89438;}
+	48%   {color:#e65453;}
+	64%   {color:#a759a8;}
+	96%   {color:#32afe2;}
+}
+
 hr {
   border: 0;
   border-top: 5px dashed var(--bgColor);
@@ -98,15 +107,15 @@ hr {
   margin-left: -2%;
   margin-right: -2%;
   animation:cyclecolors linear infinite;
-  animation-duration: 15s;
+  animation-duration: 90s;
   animation-iteration-count: infinite;
 }
 
 blockquote {
   border-left: 3px solid var(--bordercl);
-  color: #737373;
-  margin: 0;
-  padding-left: 1em;
+  color: var(--blockquote);
+  margin-left: 50px;
+  padding-left: 2em;
 }
 
 a {
@@ -148,7 +157,7 @@ a:hover {
 ul {
   list-style: none;
   padding-left: 2ch;
-  font-family: 'Inter var', system-ui, -apple-system, sans-serif;
+  font-family: "Mercury SSm A", "Mercury SSm B", 'Inter var', system-ui, -apple-system, sans-serif;
   font-size: 1.15rem;
   line-height: 1.875rem;
   letter-spacing: 0.02em;
@@ -206,7 +215,7 @@ figure h4::before {
 code {
   background-color: var(--codeColor);
   padding: .1em .2em;
-  font-family: ui-monospace, SFMono-Regular, 'fira-mono', monospace;
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 pre {
@@ -233,15 +242,30 @@ pre code {
   margin-bottom: 4em;
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: 800px;
   padding: 0 1ch;
   word-wrap: break-word;
 }
 
+.content h1 {
+  margin-bottom: 0;
+}
+
+.content time {
+  color: grey;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
 main {
-  max-width: 600px;
+  /* max-width: 700px; */
   margin-left: auto;
   margin-right: auto;
+  margin-block-end: 2em;
+}
+
+main .pagination {
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Header */
@@ -258,17 +282,28 @@ header {
   align-items: center;
 }
 
-/* header .main {
-  font-size: 1.6rem;
+header .main {
+  font-size: 2rem;
   font-style: italic;
+  animation: cyclecolorstext 90s linear infinite;
 }
- */
+
 header img {
   border: unset;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.8rem;
+  margin-top: 2em;
+  line-height: 1.3;
+  color: var(--hColor);
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1.5rem;
+  font-style: italic;
   margin-top: 2em;
   line-height: 1.3;
   color: var(--hColor);
@@ -289,7 +324,7 @@ footer {
 }
 
 button {
-  font-family: 'Inter var', system-ui, -apple-system, sans-serif;
+  font-family: "Mercury SSm A", "Mercury SSm B", 'Inter var', system-ui, -apple-system, sans-serif;
 }
 
 /* Common */
@@ -299,15 +334,36 @@ button {
 
 time {
   color: grey;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   font-style: italic;
+}
+
+.description {
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+  font-family: "Mercury SSm A", "Mercury SSm B", 'Inter var', system-ui, -apple-system, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Posts */
 article .title {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
+.meta {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.body p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Callout */
 .callout {
@@ -317,7 +373,7 @@ article .title {
 }
 
 .callout p {
-  font-family: ui-monospace, SFMono-Regular, 'fira-mono',  monospace;
+  font-family: "Operator SSm A", "Operator SSm B", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   margin: 0;
 }
 

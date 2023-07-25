@@ -4,7 +4,7 @@
   --bgColor: #202124;
   --fontColor: #fff;
   --hColor:#ddd;
-  --bordercl:blue;
+  --bordercl:#5454ff;
   --callouctcolor:dodgerblue;
   --hovercolor:#fc9841;
   --darkMaincolor: #FC7E0F;
@@ -12,4 +12,5 @@
   --preColor:#272822;
   --littlefootBground:#1f2024;
   --littlefootButton:#36383f;
+  --blockquote:#e6e6ff;
 }
