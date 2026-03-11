@@ -10,7 +10,9 @@
   --darkMaincolor: #FC7E0F;
   --codeColor:lightblue;
   --preColor:#272822;
-  --littlefootBground:#1f2024;
   --littlefootButton:#36383f;
   --blockquote:#e6e6ff;
+}
+.littlefoot {
+  --popover-background-color:#1f2024;
 }
