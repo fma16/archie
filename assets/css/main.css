@@ -131,6 +131,7 @@ a:hover {
 }
 
 .littlefoot__button {
+  -webkit-font-smoothing: antialiased;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -140,9 +141,13 @@ a:hover {
 }
 
 .littlefoot__button.is-active {
-  background-color: var(--littlefootButton, rgba(252,126,15,.9));
+  background-color: var(--maincolor);
   color: #fff;
   transition-delay: .1s
+}
+
+.littlefoot__popover.is-active {
+  opacity: .97
 }
 
 ul {
