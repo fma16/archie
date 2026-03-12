@@ -31,7 +31,7 @@
 	{{ if and (isset .Site.Params "social") (isset .Site.Params "feathericonscdn") (eq .Site.Params.featherIconsCDN true) -}}
 		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	{{- else if (isset .Site.Params "social") -}}
-		<script src="/js/feather.min.js"></script>
+		<script src="{{ absURL "js/feather.min.js" }}"></script>
 	{{ end }}
 
 	{{ $darkcss:= resources.Get "css/dark.css" | resources.Minify }}
@@ -51,7 +51,7 @@
 	{{- if or (hasPrefix . "http://") (hasPrefix . "https://") }}
 	<script src="{{ . }}"></script>
 	{{- else }}
-	<script src="/{{ . }}"></script>
+	<script src="{{ absURL . }}"></script>
 	{{- end }}
 	{{- end }}
 	
@@ -65,11 +65,11 @@
 <!-- Littlefoot -->
 <!--     <link
       link rel="stylesheet"
-      href="/littlefoot/littlefoot.css"
+      href="{{ absURL "littlefoot/littlefoot.css" }}"
     /> -->
 
 <!-- TarteAuCitron -->
-<!--     <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
+<!--     <script type="text/javascript" src="{{ absURL "tarteaucitron/tarteaucitron.js" }}"></script>
     <script type="text/javascript">
         tarteaucitron.init({
             "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
