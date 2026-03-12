@@ -130,6 +130,15 @@ a:hover {
     color: #fff;
 }
 
+.littlefoot__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  position: relative;
+  top: -.1em
+}
+
 .littlefoot__button.is-active {
   background-color: var(--littlefootButton, rgba(252,126,15,.9));
   color: #fff;

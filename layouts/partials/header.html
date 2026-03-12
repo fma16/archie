@@ -41,7 +41,7 @@
 
 	{{ $maincss:= resources.Get "css/main.css" }}
 	{{ $littlefoot := resources.Get "littlefoot/littlefoot.css" }}
-	{{ $style := slice $maincss $littlefoot | resources.Concat "css/style.css" | resources.Minify }}
+	{{ $style := slice $littlefoot $maincss | resources.Concat "css/style.css" | resources.Minify }}
 	<link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
 
 	{{ $darkModeToggleJS:= resources.Get "dark-mode-toggle/dark-mode-toggle.mjs" | resources.Minify }}
