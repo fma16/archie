@@ -1,0 +1,4 @@
+- [ ] Modifier les polices utilisées
+  - [ ] Supprimer Typrography.com
+  - [ ] Utiliser [Equity](https://mbtype.com/fonts/equity) et [Heliotrope](https://mbtype.com/fonts/heliotrope)
+- [ ] Améliorer le rendu des polices : https://performance.dev/how-is-linear-so-fast-a-technical-breakdown#loading-massive-font-files
